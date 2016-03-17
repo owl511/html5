@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>11.用CSS给网页装潢[3]-构造文本</title>
+    <meta name="title" content="11.用CSS给网页装潢[3]-构造文本">
+    <meta name="keywords" content="11.用CSS给网页装潢[3]-构造文本">
+    <meta name="description" content="11.用CSS给网页装潢[3]-构造文本">
+</head>
+<style type="text/css">
+    p{
+        /*下面是文字（字符，文本）的各种属性，下面属性的值默认都是normal*/
+        text-indent: 10px;/*1、这是文本缩进，除了用缩进还可以用百分比，例如10%*/
+        text-indent: 20%;
+        text-align: left;/*2、文本对齐，这是默认参数,还有center、right*/
+        text-align: center;
+        line-height: 30px;/*3、文本行高，可以用像素，也可以用百分比，例如120%*/
+        word-spacing: 20px;/*4、字间隔，对中文不管用，对英语单词管用*/
+        letter-spacing: 10px;/*5、字母间隔，这个对中文就起作用了*/
+        text-decoration:underline;/*6、文字下划线，p标签默认值是none，还有一个值是underline,就是加下划线，对a标签很有用*/
+        font-family:微软雅黑, Arial, 宋体, "Time New Roman";/*7、设置字符的字体，也可以写多个，就是组合字体*/
+        font-style: oblique;/*8、字体风格，也就是word里面的字形，有normal,italic,倾斜，oblique三种*/
+        font-size: 19px;/*9、字体大小，很好理解，单位是像素*/
+        color: red;/*10、字符颜色，可以用单词，也可以用16进制表示,RGB标准，也叫颜色代码，颜色代码表示方式：color:#111111*/
+        color:#9900cc;/*10、颜色代码,在百度上搜索关键词：颜色代码，就可以得到一个色盘，可以在里面取值*/
+        font-weight: bold;/*11、字符加粗，可以用normal,bold和数字来表示*/
+    }
+    a{
+        /*去掉下划线，a标签默认值是underline，跟p标签不同。要注意*/
+        text-decoration: none;
+    }
+    a:hover{
+        /*伪类，鼠标经过时有加上下划线，并且字符颜色变成红色*/
+        text-decoration: underline;
+        color: red;
+    }
+    /*12、最后一个，关于继承属性的理解，注意：如果下面这段代码要生效，就要注释掉上面的css代码*/
+    body{
+        color: red;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    /*这个时候全文都会变成红色，15像素，加粗的字符，但我第二个div里面的字符不要变，怎么办呢？*/
+    /*我们再做一个标签就可以了，如下：*/
+    div p{
+        color: #000;
+        font-size: 12px;
+        font-weight: normal;
+    }
+    #div2 p{
+        font-size: 20px;
+        text-decoration: none;
+    }
+</style>
+<body>
+<p>
+    我是一个段落，我是how are you一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落。
+</p>
+<a href="http://www.baidu.com" target="_blank">百度一下</a>
+<br />
+<div>
+    <p>
+        我是一个段落，我是how are you一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落。
+    </p>
+</div>
+    <!--下面这个div p我要其它样式，那又怎么办呢？，那就只有加一个id号来区分开来了-->
+<div id="div2">
+    <p>
+        我是一个段落，我是how are you一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落，我是一个段落。
+    </p>
+</div>
+
+</body>
+</html>
